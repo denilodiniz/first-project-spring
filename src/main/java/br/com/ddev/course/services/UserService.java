@@ -13,14 +13,14 @@ import br.com.ddev.course.repositories.UserRepository;
 public class UserService {
 
 	@Autowired
-	private UserRepository reposiroty;
+	private UserRepository repository;
 	
 	public List<User> findAll() {
-		return reposiroty.findAll();
+		return repository.findAll();
 	}
 	
 	public User findById(Long id) {
-		Optional<User> person = reposiroty.findById(id);
+		Optional<User> person = repository.findById(id);
 		return person.get();
 	}
 	
